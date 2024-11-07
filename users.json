@@ -1,0 +1,36 @@
+{
+  "usuarios": [
+    {
+      "id_user": 1,
+      "nick_user": "usuario1",
+      "name_user": "Usuario Uno",
+      "password_user": "hashed_password_1",
+      "dni": "12345678A",
+      "email": "usuario1@example.com",
+      "address": "Dirección 123",
+      "img_user": "http://example.com/img/usuario1.jpg",
+      "admin": false
+    },
+    {
+      "id_user": 2,
+      "nick_user": "usuario2",
+      "name_user": "Usuario Dos",
+      "password_user": "hashed_password_2",
+      "dni": "23456789B",
+      "email": "usuario2@example.com",
+      "address": "Dirección 456",
+      "img_user": "http://example.com/img/usuario2.jpg",
+      "admin": true
+    },
+    {
+      "id": "5784",
+      "nick_user": "AlvaroGB462",
+      "name_user": "Alvaro Garcia Barreraaaaaaaaaaaaaaaaaaaaaa",
+      "password_user": "Ldts123$%",
+      "dni_user": "77851828W",
+      "email": "al.ga.ba.jjgg@gmail.com",
+      "address": "Calle Flor de Albahaca 5, Bloque 1, 1ºC",
+      "admin": true
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #081b29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.wrapper {
+    position: relative;
+    width: 600px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 50px 0 #00a6bc;
+    background-color: #1e2a39;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    width: 200px;
+    padding: 10px 0;
+    font-size: 18px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0ef, #c800ff);
+}
+
+.section {
+    width: 100%;
+    background-color: #1e2a39;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.user-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b3b48;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de los campos de entrada */
+.inp {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input {
+    padding: 10px 40px 10px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2b3b48;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+.input::placeholder {
+    color: #888;
+}
+
+.input + i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Estilo de botones */
+button.cancel-btn {
+    background-color: #555;
+}
+
+button.cancel-btn:hover {
+    background-color: #444;
+}
+
+/* Centrando el botón de añadir usuario */
+#addUserButton {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+}
+
+/* Cambios de visibilidad al ingresar al formulario */
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#user-form .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#user-form input[type="text"], #user-form input[type="password"], #user-form input[type="email"] {
+    width: 87%;
+}
+
+#user-form button.submit {
+    margin-bottom: 10px;
+}
+
+#user-form .form-title {
+    font-size: 28px;
+    margin-bottom: 30px; /* Espaciado entre el título y los campos */
+    text-align: center;
+    background: linear-gradient(45deg, #0ef, #c800ff); /* Gradiente de color igual a los botones */
+    -webkit-background-clip: text; /* Para aplicar el gradiente solo al texto */
+    color: transparent; /* Hacemos que el color se aplique solo al texto con gradiente */
+    width: 100%;
+}
+
+/* Botón para marcar como Administrador */
+#adminButton {
+    display: block; /* Cambia a bloque para centrarlo */
+    width: auto; /* Tamaño ajustable */
+    font-size: 14px; /* Fuente más pequeña */
+    padding: 5px 10px; /* Relleno más pequeño */
+    margin-bottom: 15px; /* Separación con los botones de Guardar y Cancelar */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto; /* Centrado horizontal */
+}
+
+#adminButton:hover {
+    background-color: #45a049; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilo para los botones de Guardar y Cancelar en línea */
+.form-buttons {
+    display: flex; /* Flexbox para los botones en línea */
+    justify-content: space-between; /* Espacio entre los botones */
+    gap: 10px; /* Separación entre botones */
+    width: 100%; /* Asegura que los botones ocupen todo el ancho */
+}
+
+.submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Color de fondo */
+    color: white;
+    font-size: 16px;
+}
+
+.submit:hover {
+    background-color: #45a049; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilo para el botón Cancelar */
+.cancel-btn {
+    background-color: #f44336; /* Color de fondo rojo */
+}
+
+.cancel-btn:hover {
+    background-color: #e53935; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilo para el campo DNI */
+#dni_user {
+    width: 87%; /* Ancho ajustado al resto de los campos */
+    padding: 10px 40px 10px 10px; /* Mismo estilo de relleno */
+    border: none;
+    border-radius: 8px;
+    background-color: #2b3b48;
+    color: white;
+    font-size: 16px;
+}
+
+#dni_user::placeholder {
+    color: #888;
+}
+
+/* Contenedor para los botones de modificar y borrar juntos */
+.user-actions {
+    display: flex;
+    justify-content: space-between; /* Alinea los botones en línea */
+    gap: 10px; /* Separación entre los botones */
+    width: 100%;
+    padding: 10px;
+}
+
+.user-actions button {
+    width: 48%; /* Asegura que los botones no se expandan demasiado */
+}
