@@ -15,13 +15,14 @@ function loginUsuario() {
                 // Buscamos al usuario con el nick_user o email_user proporcionados
                 const usuario = usuarios.find(u => (u.nick_user === username || u.email === username) && u.password_user === password);
 
-                // Si encontramos un usuario y el campo "admin" es true
-                if (usuario && usuario.admin === true) {
-                    alert("Login exitoso, redirigiendo...");
-                    window.location.href = 'usersClubs.html'; // Redirigir a la página de administración
+                if (usuario) {
+                    // Guardar "Administrador" o el nombre de usuario en localStorage
+                    localStorage.setItem('userRole', usuario.admin ? 'Administrador' : usuario.nick_user);
+
+                    // Redirigir a la página de inicio
+                    window.location.href = 'index.html';
                 } else {
-                    // Si no es administrador, no hacemos nada o mostramos un mensaje
-                    alert("No tienes permisos de administrador o los datos son incorrectos.");
+                    alert("Datos incorrectos.");
                 }
             } else {
                 console.error("Error al hacer la solicitud:", xhr.status, xhr.statusText);
@@ -31,7 +32,6 @@ function loginUsuario() {
     };
     xhr.send(); // Enviar la solicitud
 }
-
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -245,4 +245,15 @@ function guardarUsuario() {
     };
     xhr.send();
 }
+
+function cerrarFormulario() {
+    // Ocultar el formulario
+    const form = document.getElementById('user-form');
+    form.style.display = 'none';
+
+    // Volver a mostrar las secciones de lista de usuarios y botones
+    document.getElementById('buttons-container').style.display = 'block';
+    document.getElementById('users-section').style.display = 'block';
+}
+
 
