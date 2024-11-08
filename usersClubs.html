@@ -23,55 +23,50 @@
 
         <!-- Recuadro que contiene la lista de usuarios -->
         <div id="users-section" class="section" style="display: none">
-            <div class="section-header">
-                <h1 class="title">Lista de Usuarios</h1>
-            </div>
-            <ul id="lista-usuarios" class="user-list"></ul>
+            <!-- Sección para usuarios normales -->
+            <h2>Lista de Usuarios Normales</h2>
+            <ul id="lista-usuarios-normales" class="user-list"></ul>
+
+            <!-- Sección para usuarios administradores -->
+            <h2>Lista de Usuarios Administradores</h2>
+            <ul id="lista-usuarios-administradores" class="user-list"></ul>
+
             <button id="addUserButton" class="submit" onclick="mostrarFormulario()">
                 Añadir Usuario
             </button>
         </div>
 
         <!-- Formulario para agregar/modificar usuario (emergente) -->
-        <!-- Formulario para agregar/modificar usuario (emergente) -->
         <div id="user-form" class="form-container" style="display: none;">
             <h1 id="form-title" class="form-title">Registrar Usuario</h1>
             <div class="inp">
                 <input type="text" id="nick_user" class="input" placeholder="Usuario" required>
-                <i class="fa-solid fa-user"></i>
             </div>
             <div class="inp">
                 <input type="text" id="name_user" class="input" placeholder="Nombre" required>
-                <i class="fa-solid fa-user"></i>
             </div>
             <div class="inp">
                 <input type="password" id="password_user" class="input" placeholder="Contraseña" required>
-                <i class="fa-solid fa-lock"></i>
             </div>
             <div class="inp">
                 <input type="text" id="dni_user" class="input" placeholder="DNI" required>
-                <i class="fa-solid fa-id-card"></i>
             </div>
             <div class="inp">
                 <input type="email" id="email_user" class="input" placeholder="Correo" required>
-                <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="inp">
                 <input type="text" id="address_user" class="input" placeholder="Dirección" required>
-                <i class="fa-solid fa-map-marker-alt"></i>
             </div>
-
-            <!-- Botón para marcar como Administrador -->
-            <button type="button" id="adminButton" class="submit admin-btn"
-                onclick="marcarAdministrador()">Administrador</button>
-
+            <div id="admin_checkbox">
+                <input type="checkbox" id="admin" name="admin">
+                <label for="admin">Administrador</label>
+            </div>
             <!-- Botones de Guardar y Cancelar -->
             <div class="form-buttons">
                 <button type="button" onclick="guardarUsuario()" class="submit">Guardar Usuario</button>
                 <button type="button" onclick="cerrarFormulario()" class="submit cancel-btn">Cancelar</button>
             </div>
         </div>
-
     </div>
 
     <script src="script.js"></script>

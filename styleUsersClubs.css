@@ -20,9 +20,10 @@ body {
     color: #eee;
 }
 
+/* Wrapper general */
 .wrapper {
     position: relative;
-    width: 600px; 
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,6 +35,7 @@ body {
     padding: 20px;
 }
 
+/* Contenedor de botones */
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -52,6 +54,11 @@ body {
     background: linear-gradient(45deg, #0ef, #c800ff);
 }
 
+.submit:hover {
+    background: linear-gradient(45deg, #c800ff, #0ef);
+}
+
+/* Sección de usuarios */
 .section {
     width: 100%;
     background-color: #1e2a39;
@@ -65,7 +72,7 @@ body {
 
 .user-list {
     list-style-type: none;
-    padding-left: 0;
+    padding: 20px; /* Solo padding aquí */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -76,7 +83,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #2b3b48;
-    padding: 10px;
+    padding: 10px; /* Solo padding aquí */
     border-radius: 8px;
 }
 
@@ -93,12 +100,13 @@ button:hover {
     background-color: #d32f2f;
 }
 
+/* Título de las secciones */
 .title {
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-/* Estilo de los campos de entrada */
+/* Estilo para los campos de entrada */
 .inp {
     position: relative;
     margin-bottom: 20px;
@@ -127,7 +135,7 @@ button:hover {
     color: #888;
 }
 
-/* Estilo de botones */
+/* Estilo para los botones de cancelar */
 button.cancel-btn {
     background-color: #555;
 }
@@ -143,13 +151,7 @@ button.cancel-btn:hover {
     width: 200px;
 }
 
-/* Cambios de visibilidad al ingresar al formulario */
-#buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
+/* Formulario de usuario */
 #user-form .form-container {
     display: flex;
     flex-direction: column;
@@ -158,7 +160,9 @@ button.cancel-btn:hover {
     gap: 20px;
 }
 
-#user-form input[type="text"], #user-form input[type="password"], #user-form input[type="email"] {
+#user-form input[type="text"],
+#user-form input[type="password"],
+#user-form input[type="email"] {
     width: 87%;
 }
 
@@ -166,42 +170,61 @@ button.cancel-btn:hover {
     margin-bottom: 10px;
 }
 
+/* Título del formulario */
 #user-form .form-title {
     font-size: 28px;
-    margin-bottom: 30px; /* Espaciado entre el título y los campos */
+    margin-bottom: 30px;
     text-align: center;
-    background: linear-gradient(45deg, #0ef, #c800ff); /* Gradiente de color igual a los botones */
-    -webkit-background-clip: text; /* Para aplicar el gradiente solo al texto */
-    color: transparent; /* Hacemos que el color se aplique solo al texto con gradiente */
+    background: linear-gradient(45deg, #0ef, #c800ff);
+    -webkit-background-clip: text;
+    color: transparent;
     width: 100%;
 }
 
-/* Botón para marcar como Administrador */
-#adminButton {
-    display: block; /* Cambia a bloque para centrarlo */
-    width: auto; /* Tamaño ajustable */
-    font-size: 14px; /* Fuente más pequeña */
-    padding: 5px 10px; /* Relleno más pequeño */
-    margin-bottom: 15px; /* Separación con los botones de Guardar y Cancelar */
-    background-color: #4CAF50; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
+/* Estilo para el checkbox de administrador */
+#admin_checkbox {
+    display: flex;
+    align-items: center; /* Alinea el checkbox y el texto */
+    gap: 10px; /* Añade espacio entre el checkbox y el texto */
+    padding-bottom: 20px;
+}
+
+#admin_checkbox input[type="checkbox"] {
+    transform: scale(1.2);
     cursor: pointer;
-    margin-left: auto; /* Centrado horizontal */
-    margin-right: auto; /* Centrado horizontal */
+}
+
+#admin_checkbox label {
+    color: #888;
+    font-size: 16px;
+}
+
+/* Botón de administrador */
+#adminButton {
+    display: block;
+    width: auto;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #adminButton:hover {
-    background-color: #45a049; /* Color de fondo al pasar el cursor */
+    background-color: #45a049;
 }
 
-/* Estilo para los botones de Guardar y Cancelar en línea */
+/* Botones de guardar y cancelar */
 .form-buttons {
-    display: flex; /* Flexbox para los botones en línea */
-    justify-content: space-between; /* Espacio entre los botones */
-    gap: 10px; /* Separación entre botones */
-    width: 100%; /* Asegura que los botones ocupen todo el ancho */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 }
 
 .submit {
@@ -209,28 +232,27 @@ button.cancel-btn:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #4CAF50; /* Color de fondo */
+    background-color: #4CAF50;
     color: white;
     font-size: 16px;
 }
 
 .submit:hover {
-    background-color: #45a049; /* Color de fondo al pasar el cursor */
+    background-color: #45a049;
 }
 
-/* Estilo para el botón Cancelar */
 .cancel-btn {
-    background-color: #f44336; /* Color de fondo rojo */
+    background-color: #f44336;
 }
 
 .cancel-btn:hover {
-    background-color: #e53935; /* Color de fondo al pasar el cursor */
+    background-color: #e53935;
 }
 
-/* Estilo para el campo DNI */
+/* Estilo para el DNI */
 #dni_user {
-    width: 87%; /* Ancho ajustado al resto de los campos */
-    padding: 10px 40px 10px 10px; /* Mismo estilo de relleno */
+    width: 87%;
+    padding: 10px 40px 10px 10px;
     border: none;
     border-radius: 8px;
     background-color: #2b3b48;
@@ -242,15 +264,26 @@ button.cancel-btn:hover {
     color: #888;
 }
 
-/* Contenedor para los botones de modificar y borrar juntos */
+/* Estilo para las acciones de usuario */
 .user-actions {
     display: flex;
-    justify-content: space-between; /* Alinea los botones en línea */
-    gap: 10px; /* Separación entre los botones */
+    justify-content: space-between;
+    gap: 10px;
     width: 100%;
     padding: 10px;
 }
 
 .user-actions button {
-    width: 48%; /* Asegura que los botones no se expandan demasiado */
+    width: 48%;
+}
+
+/* Estilo para el checkbox dentro del formulario */
+.inp input[type="checkbox"] {
+    margin: 10px 10px 0 0;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.inp input[type="checkbox"]:checked {
+    background-color: #00bcd4;
 }
